@@ -1,0 +1,293 @@
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('/surface/Assets/css/fonts/all/normal/segoeui.eot');
+    src: url('/surface/Assets/css/fonts/all/normal/segoeui.eot?#iefix') format('embedded-opentype'),
+         url('/surface/Assets/css/fonts/all/normal/segoeui.woff') format('woff'),
+         url('/surface/Assets/css/fonts/all/normal/segoeui.svg#SegoeUI') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.main{
+  width: 102% !important;
+  height: 100vh;
+  background-color: #FFFFFF;
+  margin-left: -20px;
+}
+
+.navigation__bar{
+  background: #0089E5;
+  height: 5.5vh;
+  position: relative;
+
+}
+.website__name{
+  font-size: 26px;
+  font-family: Segoe UI;
+  display:inline-block;
+  text-align: right;
+  line-height: 45px;
+}
+
+.search__box{
+  height: 30px;
+  width: 250px;
+  border: none;
+  padding-left: 10px;
+  margin-left: 100px;
+}
+.search__box::placeholder{
+  font-size: 14px;
+  font-family: Segoe UI;
+  line-height: 25px;
+}
+.navbar-header{
+  float: left;
+}
+.navigation__bar__right li{
+  display: inline-block;
+  margin-right: 30px;
+  line-height: 47px;
+}
+.navigation__bar__right{
+  float: right;
+}
+
+.navigation__bar__right img{
+  float: right;
+  height: 47px;
+}
+
+.option{
+  float: left;
+  color: white;
+}
+.user__image{
+  float: left
+}
+
+.add__post__button{
+  float: right;
+  margin-top: 7px;
+  margin-left: 20px;
+  margin-right: 10px;
+
+}
+.add__post__button button{
+  width: 90px;
+  border: none;
+  border-radius: 20px;
+  height: 35px;
+  background: #38E34F;
+
+}
+
+.website__content{
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 800px 400px;
+  justify-content: center;
+}
+
+.website__content .news__and__posts{
+  height: auto;
+  width: 800px;
+  background-color: #F8F8F8;
+  border: 1px solid #95989A;
+  border-right: none;
+  text-align: center;
+}
+
+.website__content .news__and__posts .heading{
+  height: 60px;
+  line-height: 60px;
+  margin-top: 10px;
+  border-bottom: 3px solid #EEEEEE;
+}
+
+.website__content .friends__and__find__friends{
+  position: relative;
+  height: 93.2vh;
+    width: 350px;
+  background-color: #FCFCFC;
+  border: 1px solid #95989A;
+}
+
+.friends__and__find__friends .friends__heading h1{
+  font-family: Segoe UI;
+  height: 40px;
+  width: 100%;
+  font-size: 28px;
+  margin:15px 0px 10px 20px;
+}
+
+.friends__and__find__friends .search__friend input{
+  width: 100%;
+  height: 50px;
+  border: 1px solid #95989A;
+  padding-left: 10px;
+  border-left: none;
+  border-right: none;
+}
+
+.friends__and__find__friends .friends__list {
+  height: 300px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.friends__and__find__friends .heading__people__you__may__know p{
+  font-family: Segoe UI;
+  height: 30px;
+  width: 100%;
+  font-size: 18px;
+  margin:120px 0px 10px 20px;
+}
+
+.friends__and__find__friends .peoples__list{
+  height: 280px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.friend{
+  height: 65px;
+  width: 100%;
+  border: 1px solid #95989A;
+  background-color: #EEEEEE;
+  position: relative;
+  border-left: none;
+  border-right: none;
+  margin-top: 2px;
+  opacity: 0.9;
+}
+
+
+
+.friend__image img{
+  height: 47px;
+  margin-left: 10px;
+  margin-top: 6px;
+  float: left;
+}
+
+.friend .friend__name{
+  display: inline-block;
+    float: left;
+    color: black;
+    margin-left: 12px;
+    margin-top: 7px;
+}
+
+
+.friend .last__seen{
+  display: inline-block;
+    float: right;
+    color: grey;
+    margin-right: 8px;
+    margin-top: 2px;
+    font-size: 13px;
+}
+
+.friend .Skill span{
+  display: block;
+    color: grey;
+    position: absolute;
+    bottom: 16px;
+    left: 70px;
+    color: #95989A;
+    font-size: 12.5px;
+}
+
+.website__content .news__and__posts .material .post{
+  height: 500px;
+  width: 600px;
+  border: 1px solid #000;
+  margin-left: 100px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.website__content .news__and__posts .material .post .user__img__in__post {
+  height: 55px;
+  float: left;
+  margin-left: 18px;
+  margin-top: 10px;
+}
+
+.website__content .news__and__posts .material .post .post__heading{
+  float: left;
+  text-align: left;
+}
+
+.website__content .news__and__posts .material .post .post__heading h1{
+  font-size: 30px;
+  font-family: sans-serif;
+  margin-top: 10px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.website__content .news__and__posts .material .post .post__heading p{
+  margin-top: -14px;
+  font-size: 14px;
+  color: grey;
+  margin-left: 5px;
+  float: left;
+}
+
+.website__content .news__and__posts .material .post .post__heading .time__ago{
+  float: right;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: grey;
+}
+
+.website__content .news__and__posts .material .post .post__image img{
+  height: 280px;
+}
+
+.website__content .news__and__posts .material .post .add__comment__in__post__section .user__image__for__comment{
+  float: left;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.website__content .news__and__posts .material .post .add__comment__in__post__section input{
+  float: left;
+  margin-top: 25px;
+    margin-left: 15px;
+  height: 41px;
+  width: 380px;
+  padding-left: 15px;
+}
+
+.website__content .news__and__posts .material .post .options__for__comment .icons .add__message{
+  margin-top: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.website__content .news__and__posts .material .post .see__all__comments{
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  background-color: #EEEEEE;
+  border: 1px solid #95989A;
+  float: left;
+  margin-top: 32px;
+  line-height: 40px;
+}

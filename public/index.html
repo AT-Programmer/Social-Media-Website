@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Star || Let's Communicate</title>
+
+          <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="/css/index.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+    <div class="container-fluid main text-white">
+
+      <div class="gridder">
+        <div class="sa">
+              <h1 class="text-white welcome__heading display-4">Welcome To</h1>
+              <p class="monster-club display-5">monster club</p><br>
+        </div>
+        <div class="buttons ">
+          <input type="name" name="" placeholder="UserName" class="w-100 p-3 text-white username">
+          <input type="email" name="" placeholder="Email Address" class="w-100 p-3 text-white email__adress">
+          <input type="password" name="" placeholder=Password class="w-100 p-3 text-white input__password">
+                  <button type="submit" class="w-100 p-3 text-white sbmt">Sign Up</button>
+        </div>
+
+        <div class="sign__in">
+
+              <p class="telling__account">Already Have an account? </p> <a href="/login.html">Sign In</a>
+            </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+
+<script type="text/javascript">
+
+  var socket = io()
+
+  var button = document.querySelector('.sbmt')
+
+  button.addEventListener('click',sendData)
+
+function sendData(event){
+
+        socket.emit('checkData',{
+          username: document.querySelector('.username').value
+          email: document.querySelector('email__adress').value,
+          password: document.querySelector('input__password').value
+        })
+}
+
+socket.on('showError',function(data){
+
+})
+socket.on('saved',function(data){
+
+})
+
+</script>
+
+
+
+  </body>
+</html>

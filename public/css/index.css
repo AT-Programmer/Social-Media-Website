@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('/surface/Assets/css/fonts/all/normal/segoeui.eot');
+    src: url('/surface/Assets/css/fonts/all/normal/segoeui.eot?#iefix') format('embedded-opentype'),
+         url('/surface/Assets/css/fonts/all/normal/segoeui.woff') format('woff'),
+         url('/surface/Assets/css/fonts/all/normal/segoeui.svg#SegoeUI') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100vh;
+  width: 100%;
+  background: #171515;
+  overflow: hidden;
+  background-image: url('/bg/1.jpg');
+}
+
+.welcome__heading{
+  font-family: Segoe UI;
+  font-weight: normal;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.sa{
+  text-align: center;
+}
+
+
+.monster-club{
+  font-family: Segoe UI;
+  font-weight: bold;
+  padding-top: 0px;
+  font-size: 22px;
+  margin-top: -9px;
+  display: block;
+
+}
+.buttons{
+  margin-left: -5px;
+}
+
+input{
+  display: block;
+  background: #373141;
+  border: 1px solid #95989A;
+  color: white;
+  font-family: Segoe UI;
+  height: 55px;
+  margin-top: 20px;
+  opacity: 0.7;
+}
+input::placeholder{
+  color: white;
+  opacity: 1;
+}
+button{
+  background: #C93EC0;
+  border: 1px solid #95989A;
+  margin-top: 27px;
+  border-radius: 45px ;
+  width: 150px;
+}
+
+button:hover{
+  background-color: #FF1DF0;
+  transition: 0.5s ease;
+}
+
+.telling__account{
+  display: inline-block;
+  margin-top: 35px;
+  opacity: 0.5;
+}
+span{
+  color: #00B6D4;
+  margin-left: 12px;
+}
+
+button:nth-child(2){
+  background: none;
+  border: none;
+  color: #00B6D4;
+  margin-right: 5px;
+  width: 70px;
+}
