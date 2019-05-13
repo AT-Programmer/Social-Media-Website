@@ -50,19 +50,36 @@
   button.addEventListener('click',sendData)
 
 function sendData(event){
-
         socket.emit('checkData',{
-          username: document.querySelector('.username').value
-          email: document.querySelector('email__adress').value,
-          password: document.querySelector('input__password').value
+          username: document.querySelector('.username').value,
+          email: document.querySelector('.email__adress').value,
+          password: document.querySelector('.input__password').value
         })
 }
 
 socket.on('showError',function(data){
+  for(var i in data.err.errors){
+    console.log(i)
+    if(i == 'username'){
+      throw new Error(alert(data.err.errors.username.message))
+    }
+    if(i == 'email'){
+      throw new Error(alert(data.err.errors.email.message))
+    }
+    if(i == 'password'){
+      throw new Error(alert(data.err.errors.password.message))
+    }
+
+  }
+
+  if(data){
+    alert('Email Already Existed!')
+  }
 
 })
 socket.on('saved',function(data){
-
+    alert(data.message)
+    window.location.href = "/login";
 })
 
 </script>

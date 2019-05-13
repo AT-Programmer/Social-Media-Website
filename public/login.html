@@ -22,10 +22,13 @@
         </div>
         <div class="buttons ">
 
-          <input type="email" name="" placeholder="Username Or Email Address" class="w-100 p-3 text-white">
-          <input type="password" name="" placeholder=Password class="w-100 p-3 text-white">
+          <input type="email" name="" placeholder="Username Or Email Address" class="w-100 p-3 text-white email">
+          <input type="password" name="" placeholder=Password class="w-100 p-3 text-white password">
 
-                  <button type="submit" class="w-100 p-3 text-white">Sign In</button>
+<form action='/homepage?id=' method="post">
+      <button type="submit" class="w-100 p-3 text-white sbmt">Sign In</button>
+</form>
+
         </div>
 
         <div class="sign__up">
@@ -42,8 +45,29 @@
 
     <script type="text/javascript">
 
+
     var socket = io()
 
+
+    document.querySelector('.sbmt').addEventListener('click',send)
+
+    function send(){
+      socket.emit('check_email_password',{
+        email: document.querySelector('.email').value,
+        password: document.querySelector('.password').value
+      })
+    }
+
+    socket.on('error_in_sign_in',function(data){
+
+        alert(data.message)
+        window.location.href = '/login'
+    })
+
+    // socket.on('succesfully_sign_in',function(data){
+    //
+    //
+    // })
     </script>
 
 

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 mongoose.Promise = global.Promise;
+var validator = require('validator')
 
 mongoose.connect('mongodb://localhost:27017/Database')
 
@@ -10,14 +11,14 @@ var User = mongoose.model('Users',{
     unique: true,
     maxlength: 8,
     minlength: 2
-  }
+  },
   email : {
     type : String,
     required: true,
     unique: true,
     validate: {
         validator : validator.isEmail,
-        message : '{VALUE} is not an email'
+        message : `{VALUE} is not an email`
       }
   },
   password: {
@@ -26,3 +27,7 @@ var User = mongoose.model('Users',{
     minlength:8
   }
 })
+
+module.exports = {
+  User
+}
